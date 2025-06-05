@@ -4,6 +4,11 @@
 
 <br>
 
+## About
+
+Visit our website: [GIQ Project Page](https://toomanymatts.github.io/giq-project-page-test/)
+
+
 
 
 This repository contains the official codebase for **G-IQ**, a comprehensive benchmark designed to assess the geometric reasoning capabilities of vision and vision-language foundation models on a diverse collection of polyhedra exhibiting rich geometric properties—convexity, symmetry, and varying levels of complexity.
@@ -19,8 +24,8 @@ This repository contains the official codebase for **G-IQ**, a comprehensive ben
 1. [Download Links to Renderings and Meshes](#download-links-to-renderings-and-meshes)
 2. [JSON Metadata Files Describing Polyhedra and Splits](#json-metadata-files-describing-polyhedra-and-splits)
 3. [Featurizers Used in Experiments](#featurizers-used-in-experiments)
-4. [Results: Monocular 3D Reconstruction](#results-monocular-3d-reconstruction)
-5. [Citation](#citation)
+4. [Citation](#citation)
+
 
 ---
 
@@ -113,23 +118,8 @@ emb = model.encode_image(img_prep)
 
 ---
 
-## Results: Monocular 3D Reconstruction
 
-Below are representative results of monocular 3D reconstruction using state-of-the-art methods (Shap-E, Stable Fast 3D, OpenLRM):
 
-<p align="center">
-  <img width="600" src="demo_files/grid_comparison (4).gif" alt="Monocular 3D Reconstruction Results"/>
-  <!-- Replace with actual GIF showcasing reconstruction results -->
-</p>
-
-<p align="center">
-  <video width="600" autoplay loop muted playsinline>
-    <source src="demo_files/grid_comparison.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
-
----
 
 ## Citation
 ```BibTeX
