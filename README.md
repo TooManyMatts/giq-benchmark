@@ -6,7 +6,7 @@
 
 ## About
 
-Visit our website: [GIQ Project Page](https://toomanymatts.github.io/giq-project-page-test/)
+Visit our website: [GIQ Project Page](https://toomanymatts.github.io/giq-benchmark/)
 
 
 
