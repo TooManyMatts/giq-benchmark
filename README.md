@@ -11,7 +11,7 @@ Visit our website: [GIQ Project Page](https://toomanymatts.github.io/giq-project
 
 
 
-This repository contains the official codebase for **G-IQ**, a comprehensive benchmark designed to assess the geometric reasoning capabilities of vision and vision-language foundation models on a diverse collection of polyhedra exhibiting rich geometric properties—convexity, symmetry, and varying levels of complexity.
+This repository contains the official codebase for **GIQ**, a comprehensive benchmark designed to assess the geometric reasoning capabilities of vision and vision-language foundation models on a diverse collection of polyhedra exhibiting rich geometric properties—convexity, symmetry, and varying levels of complexity.
 
 <br>
 <p align="center">
