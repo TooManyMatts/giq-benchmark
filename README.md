@@ -21,7 +21,6 @@ This repository contains the official codebase for **G-IQ**, a comprehensive ben
 3. [Featurizers Used in Experiments](#featurizers-used-in-experiments)
 4. [Results: Monocular 3D Reconstruction](#results-monocular-3d-reconstruction)
 5. [Citation](#citation)
-6. [License](#license)
 
 ---
 
