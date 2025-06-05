@@ -1,0 +1,1027 @@
+{
+    "cid_1": {
+        "name": "triakis tetrahedron",
+        "group": "catalan",
+        "sym": "None"
+    },
+    "cid_2": {
+        "name": "rhombic dodecahedron",
+        "group": "catalan",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "cid_3": {
+        "name": "triakis octahedron",
+        "group": "catalan",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "cid_4": {
+        "name": "tetrakis cube",
+        "group": "catalan",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "cid_5": {
+        "name": "deltoidal icositetrahedron",
+        "group": "catalan",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "cid_6": {
+        "name": "disdyakis dodecahedron",
+        "group": "catalan",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "cid_7": {
+        "name": "pentagonal icositetrahedron",
+        "group": "catalan",
+        "sym": "4-fold rotation"
+    },
+    "cid_8": {
+        "name": "rhombic triacontahedron",
+        "group": "catalan",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "cid_9": {
+        "name": "triakis icosahedron",
+        "group": "catalan",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "cid_10": {
+        "name": "pentakis dodecahedron",
+        "group": "catalan",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "cid_11": {
+        "name": "deltoidal hexecontahedron",
+        "group": "catalan",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "cid_12": {
+        "name": "disdyakis triacontahedron",
+        "group": "catalan",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "cid_13": {
+        "name": "pentagonal hexecontahedron",
+        "group": "catalan",
+        "sym": "5-fold rotation"
+    },
+    "jid_1": {
+        "name": "square pyramid",
+        "group": "johnson"
+    },
+    "jid_2": {
+        "name": "pentagonal pyramid",
+        "group": "johnson"
+    },
+    "jid_3": {
+        "name": "triangular cupola",
+        "group": "johnson"
+    },
+    "jid_4": {
+        "name": "square cupola",
+        "group": "johnson"
+    },
+    "jid_5": {
+        "name": "pentagonal cupola",
+        "group": "johnson"
+    },
+    "jid_6": {
+        "name": "pentagonal rotunda",
+        "group": "johnson"
+    },
+    "jid_7": {
+        "name": "elongated triangular pyramid",
+        "group": "johnson"
+    },
+    "jid_8": {
+        "name": "elongated square pyramid",
+        "group": "johnson"
+    },
+    "jid_9": {
+        "name": "elongated pentagonal pyramid",
+        "group": "johnson"
+    },
+    "jid_10": {
+        "name": "gyroelongated square pyramid",
+        "group": "johnson"
+    },
+    "jid_11": {
+        "name": "gyroelongated pentagonal pyramid",
+        "group": "johnson"
+    },
+    "jid_12": {
+        "name": "triangular bipyramid",
+        "group": "johnson"
+    },
+    "jid_13": {
+        "name": "pentagonal bipyramid",
+        "group": "johnson"
+    },
+    "jid_14": {
+        "name": "elongated triangular bipyramid",
+        "group": "johnson"
+    },
+    "jid_15": {
+        "name": "elongated square bipyramid",
+        "group": "johnson"
+    },
+    "jid_16": {
+        "name": "elongated pentagonal bipyramid",
+        "group": "johnson"
+    },
+    "jid_17": {
+        "name": "gyroelongated square bipyramid",
+        "group": "johnson"
+    },
+    "jid_18": {
+        "name": "elongated triangular cupola",
+        "group": "johnson"
+    },
+    "jid_19": {
+        "name": "elongated square cupola",
+        "group": "johnson"
+    },
+    "jid_20": {
+        "name": "elongated pentagonal cupola",
+        "group": "johnson"
+    },
+    "jid_21": {
+        "name": "elongated pentagonal rotunda",
+        "group": "johnson"
+    },
+    "jid_22": {
+        "name": "gyroelongated triangular cupola",
+        "group": "johnson"
+    },
+    "jid_23": {
+        "name": "gyroelongated square cupola",
+        "group": "johnson"
+    },
+    "jid_24": {
+        "name": "gyroelongated pentagonal cupola",
+        "group": "johnson"
+    },
+    "jid_25": {
+        "name": "gyroelongated pentagonal rotunda",
+        "group": "johnson"
+    },
+    "jid_26": {
+        "name": "gyrobifastigium",
+        "group": "johnson"
+    },
+    "jid_27": {
+        "name": "triangular orthobicupola",
+        "group": "johnson"
+    },
+    "jid_28": {
+        "name": "square orthobicupola",
+        "group": "johnson"
+    },
+    "jid_29": {
+        "name": "square gyrobicupola",
+        "group": "johnson"
+    },
+    "jid_30": {
+        "name": "pentagonal orthobicupola",
+        "group": "johnson"
+    },
+    "jid_31": {
+        "name": "pentagonal gyrobicupola",
+        "group": "johnson"
+    },
+    "jid_32": {
+        "name": "pentagonal orthocupolarotunda",
+        "group": "johnson"
+    },
+    "jid_33": {
+        "name": "pentagonal gyrocupolarotunda",
+        "group": "johnson"
+    },
+    "jid_34": {
+        "name": "pentagonal orthobirotunda",
+        "group": "johnson"
+    },
+    "jid_35": {
+        "name": "elongated triangular orthobicupola",
+        "group": "johnson"
+    },
+    "jid_36": {
+        "name": "elongated triangular gyrobicupola",
+        "group": "johnson"
+    },
+    "jid_37": {
+        "name": "elongated square gyrobicupola",
+        "group": "johnson"
+    },
+    "jid_38": {
+        "name": "elongated pentagonal orthobicupola",
+        "group": "johnson"
+    },
+    "jid_39": {
+        "name": "elongated pentagonal gyrobicupola",
+        "group": "johnson"
+    },
+    "jid_40": {
+        "name": "elongated pentagonal orthocupolarotunda",
+        "group": "johnson"
+    },
+    "jid_41": {
+        "name": "elongated pentagonal gyrocupolarotunda",
+        "group": "johnson"
+    },
+    "jid_42": {
+        "name": "elongated pentagonal orthobirotunda",
+        "group": "johnson"
+    },
+    "jid_43": {
+        "name": "elongated pentagonal gyrobirotunda",
+        "group": "johnson"
+    },
+    "jid_44": {
+        "name": "gyroelongated triangular bicupola",
+        "group": "johnson"
+    },
+    "jid_45": {
+        "name": "gyroelongated square bicupola",
+        "group": "johnson"
+    },
+    "jid_46": {
+        "name": "gyroelongated pentagonal bicupola",
+        "group": "johnson"
+    },
+    "jid_47": {
+        "name": "gyroelongated pentagonal cupolarotunda",
+        "group": "johnson"
+    },
+    "jid_48": {
+        "name": "gyroelongated pentagonal birotunda",
+        "group": "johnson"
+    },
+    "jid_49": {
+        "name": "augmented triangular prism",
+        "group": "johnson"
+    },
+    "jid_50": {
+        "name": "biaugmented triangular prism",
+        "group": "johnson"
+    },
+    "jid_51": {
+        "name": "triaugmented triangular prism",
+        "group": "johnson"
+    },
+    "jid_52": {
+        "name": "augmented pentagonal prism",
+        "group": "johnson"
+    },
+    "jid_53": {
+        "name": "biaugmented pentagonal prism",
+        "group": "johnson"
+    },
+    "jid_54": {
+        "name": "augmented hexagonal prism",
+        "group": "johnson"
+    },
+    "jid_55": {
+        "name": "parabiaugmented hexagonal prism",
+        "group": "johnson"
+    },
+    "jid_56": {
+        "name": "metabiaugmented hexagonal prism",
+        "group": "johnson"
+    },
+    "jid_57": {
+        "name": "triaugmented hexagonal prism",
+        "group": "johnson"
+    },
+    "jid_58": {
+        "name": "augmented dodecahedron",
+        "group": "johnson"
+    },
+    "jid_59": {
+        "name": "parabiaugmented dodecahedron",
+        "group": "johnson"
+    },
+    "jid_60": {
+        "name": "metabiaugmented dodecahedron",
+        "group": "johnson"
+    },
+    "jid_61": {
+        "name": "triaugmented dodecahedron",
+        "group": "johnson"
+    },
+    "jid_62": {
+        "name": "metabidiminished icosahedron",
+        "group": "johnson"
+    },
+    "jid_63": {
+        "name": "tridiminished icosahedron",
+        "group": "johnson"
+    },
+    "jid_64": {
+        "name": "augmented tridiminished icosahedron",
+        "group": "johnson"
+    },
+    "jid_65": {
+        "name": "augmented truncated tetrahedron",
+        "group": "johnson"
+    },
+    "jid_66": {
+        "name": "augmented truncated cube",
+        "group": "johnson"
+    },
+    "jid_67": {
+        "name": "biaugmented truncated cube",
+        "group": "johnson"
+    },
+    "jid_68": {
+        "name": "augmented truncated dodecahedron",
+        "group": "johnson"
+    },
+    "jid_69": {
+        "name": "parabiaugmented truncated dodecahedron",
+        "group": "johnson"
+    },
+    "jid_70": {
+        "name": "metabiaugmented truncated dodecahedron",
+        "group": "johnson"
+    },
+    "jid_71": {
+        "name": "triaugmented truncated dodecahedron",
+        "group": "johnson"
+    },
+    "jid_72": {
+        "name": "gyrate rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_73": {
+        "name": "parabigyrate rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_74": {
+        "name": "metabigyrate rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_75": {
+        "name": "trigyrate rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_76": {
+        "name": "diminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_77": {
+        "name": "paragyrate diminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_78": {
+        "name": "metagyrate diminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_79": {
+        "name": "bigyrate diminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_80": {
+        "name": "parabidiminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_81": {
+        "name": "metabidiminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_82": {
+        "name": "gyrate bidiminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_83": {
+        "name": "tridiminished rhombicosidodecahedron",
+        "group": "johnson"
+    },
+    "jid_84": {
+        "name": "snub disphenoid",
+        "group": "johnson"
+    },
+    "jid_85": {
+        "name": "snub square antiprism",
+        "group": "johnson"
+    },
+    "jid_86": {
+        "name": "sphenocorona",
+        "group": "johnson"
+    },
+    "jid_87": {
+        "name": "augmented sphenocorona",
+        "group": "johnson"
+    },
+    "jid_88": {
+        "name": "sphenomegacorona",
+        "group": "johnson"
+    },
+    "jid_89": {
+        "name": "hebesphenomegacorona",
+        "group": "johnson"
+    },
+    "jid_90": {
+        "name": "disphenocingulum",
+        "group": "johnson"
+    },
+    "jid_91": {
+        "name": "bilunabirotunda",
+        "group": "johnson"
+    },
+    "jid_92": {
+        "name": "triangular hebesphenorotunda",
+        "group": "johnson"
+    },
+    "wid_1": {
+        "name": "tetrahedron",
+        "group": "platonic",
+        "sym": "None"
+    },
+    "wid_2": {
+        "name": "octahedron",
+        "group": "platonic",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_3": {
+        "name": "cube or hexahedron",
+        "group": "platonic",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_4": {
+        "name": "icosahedron",
+        "group": "platonic",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_5": {
+        "name": "dodecahedron",
+        "group": "platonic",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_6": {
+        "name": "Truncated tetrahedron",
+        "group": "archimedean",
+        "sym": "None"
+    },
+    "wid_7": {
+        "name": "Truncated octahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_8": {
+        "name": "Truncated hexahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_9": {
+        "name": "Truncated icosahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_10": {
+        "name": "Truncated dodecahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_11": {
+        "name": "Cuboctahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_12": {
+        "name": "Icosidodecahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_13": {
+        "name": "Rhombicuboctahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_14": {
+        "name": "Rhombicosidodecahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_15": {
+        "name": "Rhombitruncated cuboctahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_16": {
+        "name": "Rhombitruncated icosidodecahedron",
+        "group": "archimedean",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_17": {
+        "name": "Snub cube",
+        "group": "archimedean",
+        "sym": "4-fold rotation"
+    },
+    "wid_18": {
+        "name": "Snub dodecahedron",
+        "group": "archimedean",
+        "sym": "5-fold rotation"
+    },
+    "wid_19": {
+        "name": "stellated octahedron or 'stella octangula'",
+        "group": "compounds",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_20": {
+        "name": "small stellated dodecahedron",
+        "group": "kepler-poinsot",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_21": {
+        "name": "great dodecahedron",
+        "group": "kepler-poinsot",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_22": {
+        "name": "great stellated dodecahedron",
+        "group": "kepler-poinsot"
+    },
+    "wid_23": {
+        "name": "compound of five octahedra",
+        "group": "compounds",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_24": {
+        "name": "compound of five tetrahedra",
+        "group": "compounds",
+        "sym": "5-fold rotation"
+    },
+    "wid_25": {
+        "name": "compound of ten tetrahedra",
+        "group": "compounds",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_26": {
+        "name": "triakis icosahedron or first stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_27": {
+        "name": "second stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_28": {
+        "name": "third stellation of the icosahedron or a deltahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_29": {
+        "name": "fourth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_30": {
+        "name": "fifth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_31": {
+        "name": "sixth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_32": {
+        "name": "seventh stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_33": {
+        "name": "eighth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_34": {
+        "name": "ninth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_35": {
+        "name": "tenth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "5-fold rotation"
+    },
+    "wid_36": {
+        "name": "eleventh stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "5-fold rotation"
+    },
+    "wid_37": {
+        "name": "twelfth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_38": {
+        "name": "thirteenth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "5-fold rotation"
+    },
+    "wid_39": {
+        "name": "fourteenth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "5-fold rotation"
+    },
+    "wid_40": {
+        "name": "fifteenth stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "5-fold rotation"
+    },
+    "wid_41": {
+        "name": "great icosahedron",
+        "group": "kepler-poinsot",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_42": {
+        "name": "final stellation of the icosahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_43": {
+        "name": "first stellation of the cuboctahedron or compound of a cube and an octahedron",
+        "group": "compounds",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_44": {
+        "name": "Second stellation of the cuboctahedron",
+        "group": "stellation",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_45": {
+        "name": "Third stellation of the cuboctahedron",
+        "group": "stellation",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_46": {
+        "name": "Final stellation of the cuboctahedron",
+        "group": "stellation",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_47": {
+        "name": "First stellation of the icosidodecahedron",
+        "group": "compounds",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_48": {
+        "name": "Second stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_49": {
+        "name": "Third stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_50": {
+        "name": "Fourth stellation of the icosidodecahedron",
+        "group": "compounds",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_51": {
+        "name": "Fifth stellation of the icosidodecahedron",
+        "group": "compounds",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_52": {
+        "name": "Sixth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_53": {
+        "name": "Seventh stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_54": {
+        "name": "Eighth stellation of the icosidodecahedron",
+        "group": "compounds",
+        "sym": "5-fold rotation"
+    },
+    "wid_55": {
+        "name": "Ninth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_56": {
+        "name": "Tenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_57": {
+        "name": "Eleventh stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_58": {
+        "name": "Twelfth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_59": {
+        "name": "Thirteenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_60": {
+        "name": "Fourteenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_61": {
+        "name": "Compound of the great stellated dodecahedron and the great icosahedron",
+        "group": "compounds"
+    },
+    "wid_62": {
+        "name": "Fifteenth stellation of the icosidodecahedron",
+        "group": "stellation"
+    },
+    "wid_63": {
+        "name": "Sixteenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_64": {
+        "name": "Seventeenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_65": {
+        "name": "Eighteenth stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_66": {
+        "name": "Final stellation of the icosidodecahedron",
+        "group": "stellation",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_67": {
+        "name": "Tetrahemihexahedron",
+        "group": "uniform non-convex",
+        "sym": "None"
+    },
+    "wid_68": {
+        "name": "Octahemioctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_69": {
+        "name": "Small cubicuboctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_70": {
+        "name": "Small ditrigonal icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_71": {
+        "name": "Small icosicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_72": {
+        "name": "Small dodecicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_73": {
+        "name": "Dodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_74": {
+        "name": "Small rhombidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_75": {
+        "name": "Truncated great dodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_76": {
+        "name": "Rhombidodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_77": {
+        "name": "Great cubicuboctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_78": {
+        "name": "Cubohemioctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_79": {
+        "name": "Cuboctatruncated cuboctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_80": {
+        "name": "Ditrigonal dodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_81": {
+        "name": "Great ditrigonal dodecicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_82": {
+        "name": "Small ditrigonal dodecicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_83": {
+        "name": "Icosidodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_84": {
+        "name": "Icosidodecatruncated icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_85": {
+        "name": "Quasirhombicuboctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_86": {
+        "name": "Small rhombihexahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_87": {
+        "name": "Great ditrigonal icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_88": {
+        "name": "Great icosicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_89": {
+        "name": "Small icosihemiodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_90": {
+        "name": "Small dodecicosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_91": {
+        "name": "Small dodecahemiodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_92": {
+        "name": "Quasitruncated hexahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_93": {
+        "name": "Quasitruncated cuboctahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_94": {
+        "name": "Great icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_95": {
+        "name": "Truncated great icosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_96": {
+        "name": "Rhombicosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_97": {
+        "name": "Quasitruncated small stellated dodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_98": {
+        "name": "Quasitruncated dodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_99": {
+        "name": "Great dodecicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_100": {
+        "name": "Small dodecahemicosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_101": {
+        "name": "Great dodecicosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_102": {
+        "name": "Great dodecahemicosahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_103": {
+        "name": "Great rhombihexahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,4-fold rotation"
+    },
+    "wid_104": {
+        "name": "Quasitruncated great stellated dodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_105": {
+        "name": "Quasirhombicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_106": {
+        "name": "Great icosihemiodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_107": {
+        "name": "Great dodecahemidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_108": {
+        "name": "Quasitruncated icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_109": {
+        "name": "Great rhombidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_110": {
+        "name": "Small snub icosicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_111": {
+        "name": "Snub dodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_112": {
+        "name": "Snub icosidodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_113": {
+        "name": "Great inverted snub icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_114": {
+        "name": "Inverted snub dodecadodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_115": {
+        "name": "Great snub dodecicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_116": {
+        "name": "Great snub icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_117": {
+        "name": "Great inverted retrosnub icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "5-fold rotation"
+    },
+    "wid_118": {
+        "name": "Small inverted retrosnub icosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    },
+    "wid_119": {
+        "name": "Great dirhombicosidodecahedron",
+        "group": "uniform non-convex",
+        "sym": "central point reflection,5-fold rotation"
+    }
+}

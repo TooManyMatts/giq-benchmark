@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+header, nav, main, footer {
+    margin-bottom: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0366d6;
+}
+
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
