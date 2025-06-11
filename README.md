@@ -1,6 +1,6 @@
 # GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra
 
-<a href="https://arxiv.org/pdf/2412.19920"><img src="https://img.shields.io/badge/Arxiv-2408.00653-B31B1B.svg"></a>
+<a href="https://arxiv.org/abs/2506.08194"><img src="https://img.shields.io/badge/Arxiv-2408.00653-B31B1B.svg"></a>
 
 <br>
 
@@ -123,9 +123,9 @@ emb = model.encode_image(img_prep)
 
 ## Citation
 ```BibTeX
-@article{michalkiewicz2024not,
-  title={Not all Views are Created Equal: Analyzing Viewpoint Instabilities in Vision Foundation Models},
-  author={Michalkiewicz, Mateusz and Bai, Sheena and Baktashmotlagh, Mahsa and Jampani, Varun and Balakrishnan, Guha},
-  journal={arXiv preprint arXiv:2412.19920},
-  year={2024}
+@article{michalkiewicz2025giq,
+  title={GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra},
+  author={Michalkiewicz, Mateusz and Sokhal, Anekha and Michalkiewicz, Tadeusz and Pawlikowski, Piotr and Baktashmotlagh, Mahsa and Jampani, Varun and Balakrishnan, Guha},
+  journal={arXiv preprint arXiv:2506.08194},
+  year={2025}
 }
