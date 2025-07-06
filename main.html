@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://vision-x-nyu.github.io/thinking-in-space.github.io/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            pre, code {
+                font-size: 16px;
+            }
+            .title.is-3 {
+  text-align: center;
+}
+
+.publication-video {
+  position: relative;
+  left: 50%; 
+  right: 50%;
+  margin-left: -29vw; 
+  margin-right: -50vw;
+  width: 63vw;
+}
+
+.publication-video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+}
+        </style>
+
+        <title>GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra</title>
+
+
+<style>
+  /* anywhere in your <head> or external stylesheet */
+  #fig3-caption {
+    scroll-margin-top: 600px;
+  }
+</style>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Open Graph -->
+        <meta property="og:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/">
+        <meta property="og:image" content="./static/img/fig_1_ref_300dpi.pdf">
+        <meta property="og:title" content="GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra">
+        
+        <!-- Twitter -->
+        <meta name="twitter:url" content="https://vision-x-nyu.github.io/thinking-in-space.github.io/">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="./static/img/fig_1_ref_300dpi.pdf">
+        <meta name="twitter:title" content="GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra">
+        <meta name="twitter:description" content="We introduce VSI-Bench, a novel benchmark of over 5,000 video-based visual-spatial intelligence questions, to evaluate and probe MLLMs, which revealed that their emerging spatial reasoning and local world modeling capabilities remain subhuman but promising.">
+
+        <!-- JS Libraries -->
+        <style id="distill-prerendered-styles" type="text/css">/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html {
+  font-size: 14px;
+	line-height: 1.6em;
+  /* font-family: "Libre Franklin", "Helvetica Neue", sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  /*, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media(min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #004276;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table th {
+	text-align: left;
+}
+
+table thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+table thead th {
+  padding-bottom: 0.5em;
+}
+
+table tbody :first-child td {
+  padding-top: 0.5em;
+}
+
+pre {
+  overflow: auto;
+  max-width: 100%;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  line-height: 1em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+.kicker,
+.marker {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Headline */
+
+@media(min-width: 1024px) {
+  d-title h1 span {
+    display: block;
+  }
+}
+
+/* Figure */
+
+figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+figcaption+figure {
+
+}
+
+figure img {
+  width: 100%;
+}
+
+figure svg text,
+figure svg tspan {
+}
+
+figcaption,
+.figcaption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+@media(min-width: 1024px) {
+figcaption,
+.figcaption {
+    font-size: 13px;
+  }
+}
+
+figure.external img {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+figcaption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+figcaption b,
+figcaption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@supports not (display: grid) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    display: block;
+    padding: 8px;
+  }
+}
+
+.base-grid,
+distill-header,
+d-title,
+d-abstract,
+d-article,
+d-appendix,
+distill-appendix,
+d-byline,
+d-footnote-list,
+d-citation-list,
+distill-footer {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+  grid-column-gap: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 8px;
+}
+
+@media(min-width: 768px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start middle-start text-start] 45px 45px 45px 45px 45px 45px 45px 45px [ kicker-end text-end gutter-start] 45px [middle-end] 45px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 50px [middle-start] 50px [text-start kicker-end] 50px 50px 50px 50px 50px 50px 50px 50px [text-end gutter-start] 50px [middle-end] 50px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+
+
+.base-grid {
+  grid-column: screen;
+}
+
+/* .l-body,
+d-article > *  {
+  grid-column: text;
+}
+
+.l-page,
+d-title > *,
+d-figure {
+  grid-column: page;
+} */
+
+.l-gutter {
+  grid-column: gutter;
+}
+
+.l-text,
+.l-body {
+  grid-column: text;
+}
+
+.l-page {
+  grid-column: page;
+}
+
+.l-body-outset {
+  grid-column: middle;
+}
+
+.l-page-outset {
+  grid-column: page;
+}
+
+.l-screen {
+  grid-column: screen;
+}
+
+.l-screen-inset {
+  grid-column: screen;
+  padding-left: 16px;
+  padding-left: 16px;
+}
+
+
+/* Aside */
+
+d-article aside {
+  grid-column: gutter;
+  font-size: 12px;
+  line-height: 1.6em;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+@media(min-width: 768px) {
+  aside {
+    grid-column: gutter;
+  }
+
+  .side {
+    grid-column: gutter;
+  }
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+d-title {
+  padding: 2rem 0 1.5rem;
+  contain: layout style;
+  overflow-x: hidden;
+}
+
+@media(min-width: 768px) {
+  d-title {
+    padding: 4rem 0 1.5rem;
+  }
+}
+
+d-title h1 {
+  grid-column: text;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+@media(min-width: 768px) {
+  d-title h1 {
+    font-size: 50px;
+  }
+}
+
+d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  grid-column: text;
+}
+
+d-title .status {
+  margin-top: 0px;
+  font-size: 12px;
+  color: #009688;
+  opacity: 0.8;
+  grid-column: kicker;
+}
+
+d-title .status span {
+  line-height: 1;
+  display: inline-block;
+  padding: 6px 0;
+  border-bottom: 1px solid #80cbc4;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+d-byline {
+  contain: style;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  line-height: 1.8em;
+  padding: 1.5rem 0;
+  min-height: 1.8em;
+}
+
+
+d-byline .byline {
+  grid-template-columns: 1fr 1fr;
+  grid-column: text;
+}
+
+@media(min-width: 768px) {
+  d-byline .byline {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+d-byline .authors-affiliations {
+  grid-column-end: span 2;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+}
+
+@media(min-width: 768px) {
+  d-byline .authors-affiliations {
+    margin-bottom: 0;
+  }
+}
+
+d-byline h3 {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+d-byline p {
+  margin: 0;
+}
+
+d-byline a,
+d-article d-byline a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+d-article d-byline a:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+d-byline p.author {
+  font-weight: 500;
+}
+
+d-byline .affiliations {
+
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+d-article {
+  contain: layout style;
+  overflow-x: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+d-article > * {
+  grid-column: text;
+}
+
+@media(min-width: 768px) {
+  d-article {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1024px) {
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+}
+
+
+/* H2 */
+
+
+d-article .marker {
+  text-decoration: none;
+  border: none;
+  counter-reset: section;
+  grid-column: kicker;
+  line-height: 1.7em;
+}
+
+d-article .marker:hover {
+  border: none;
+}
+
+d-article .marker span {
+  padding: 0 3px 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 4px;
+}
+
+d-article .marker:hover span {
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+d-article h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25em;
+  margin: 2rem 0 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+
+@media(min-width: 1024px) {
+  d-article h2 {
+    font-size: 36px;
+  }
+}
+
+/* H3 */
+
+d-article h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+@media(min-width: 1024px) {
+  d-article h3 {
+    font-size: 20px;
+  }
+}
+
+/* H4 */
+
+d-article h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+d-article a {
+  color: inherit;
+}
+
+d-article p,
+d-article ul,
+d-article ol,
+d-article blockquote {
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+d-article blockquote {
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  padding-left: 2em;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-article a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+d-article a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+d-article .link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+d-article ul,
+d-article ol {
+  padding-left: 24px;
+}
+
+d-article li {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+d-article li:last-child {
+  margin-bottom: 0;
+}
+
+d-article pre {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+d-article hr {
+  grid-column: screen;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+d-article section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+d-article span.equation-mimic {
+  font-family: georgia;
+  font-size: 115%;
+  font-style: italic;
+}
+
+d-article > d-code,
+d-article section > d-code  {
+  display: block;
+}
+
+d-article > d-math[block],
+d-article section > d-math[block]  {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  d-article > d-code,
+  d-article section > d-code,
+  d-article > d-math[block],
+  d-article section > d-math[block] {
+      overflow-x: scroll;
+      -ms-overflow-style: none;  // IE 10+
+      overflow: -moz-scrollbars-none;  // Firefox
+  }
+
+  d-article > d-code::-webkit-scrollbar,
+  d-article section > d-code::-webkit-scrollbar,
+  d-article > d-math[block]::-webkit-scrollbar,
+  d-article section > d-math[block]::-webkit-scrollbar {
+    display: none;  // Safari and Chrome
+  }
+}
+
+d-article .citation {
+  color: #668;
+  cursor: pointer;
+}
+
+d-include {
+  width: auto;
+  display: block;
+}
+
+d-figure {
+  contain: layout style;
+}
+
+/* KaTeX */
+
+.katex, .katex-prerendered {
+  contain: style;
+  display: inline-block;
+}
+
+/* Tables */
+
+d-article table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+d-article table th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+d-article table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+d-article table tr:last-of-type td {
+  border-bottom: none;
+}
+
+d-article table th,
+d-article table td {
+  font-size: 15px;
+  padding: 2px 8px;
+}
+
+d-article table tbody :first-child td {
+  padding-top: 2px;
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+span.katex-display {
+  text-align: left;
+  padding: 8px 0 8px 0;
+  margin: 0.5em 0 0.5em 1em;
+}
+
+span.katex {
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.18em;
+}
+/*
+ * Copyright 2018 The Distill Template Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@media print {
+
+  @page {
+    size: 8in 11in;
+    @bottom-right {
+      content: counter(page) " of " counter(pages);
+    }
+  }
+
+  html {
+    /* no general margins -- CSS Grid takes care of those */
+  }
+
+  p, code {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  d-header {
+    visibility: hidden;
+  }
+
+  d-footer {
+    display: none!important;
+  }
+
+}
+</style><script src="./main_files/distill_template.v2.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async="" src="./main_files/tex-mml-chtml.js"></script>
+        <script src="./main_files/d3.v5.min.js"></script>
+        <script src="./main_files/d3-collection.v1.min.js"></script>
+        <script src="./main_files/slid3r.js"></script>
+
+        <script defer="" src="./main_files/hider.js"></script>
+        <script defer="" src="./main_files/image_interact.js"></script>
+        <script defer="" src="./main_files/switch_videos.js"></script>
+        <script defer="" src="./main_files/video-speed.js"></script>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="./main_files/style.css">
+        <link rel="stylesheet" href="./main_files/fontawesome.all.min.css">
+        <link rel="stylesheet" href="./main_files/academicons.min.css">
+        
+        <!-- KaTeX -->
+        <link rel="stylesheet" href="./main_files/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer="" src="./main_files/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer="" src="./main_files/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+        <!-- FontAwesome -->
+        <script defer="" src="./main_files/fontawesome.all.min.js"></script>
+
+        <!-- Medium Zoom -->
+        <script src="./main_files/jquery.min.js"></script>
+        <script defer="" src="./main_files/medium-zoom.min.js"></script>
+        <script defer="" src="./main_files/zoom.js"></script>
+
+        <!-- Leaderboard Styles -->
+        <style>
+        
+        .leaderboard-table {
+            width: 140%;
+            margin-left: -20%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .leaderboard-container {
+            position: relative;
+        }
+
+        .leaderboard-table thead {
+            background: #4a5568;
+            color: white;
+        }
+
+        .leaderboard-table th {
+            padding: 14px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.025em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .sortable-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .sortable-header .sort-indicator {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            font-size: 14px;
+            line-height: 1;
+            transform: translateY(-50%);
+            color: #a0aec0;
+        }
+
+        .sortable-header.active .sort-indicator {
+            color: white;
+        }
+        
+        .section-header {
+            background-color: #deeef8;
+            font-weight: 700;
+            color: #2d3748;
+            letter-spacing: 1px;
+            font-size: 18px;
+            text-align: center;
+            padding: 12px !important;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .leaderboard-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+            text-align: center;
+        }
+        
+        .leaderboard-table tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        
+        .leaderboard-table tbody tr:hover {
+            background-color: #f7fafc;
+        }
+
+        .leaderboard-table td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: #2d3748;
+            padding-left: 20px;
+        }
+        
+        .leaderboard-table td:nth-child(5) {
+            font-weight: 700;
+            font-size: 15px;
+            color: #2d3748;
+        }
+        
+        .human-level-row {
+            background: #fffbeb85 !important;
+            font-weight: 600;
+        }
+        
+        .top-performer {
+            background: #f0fdf494 !important;
+        }
+
+        .top-performer td:first-child::before {
+            content: '🥇 ';
+        }
+
+        .model-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .proprietary-badge {
+            background: #e2e8f0;
+            color: #475569;
+            border: 1px solid #cbd5e0;
+        }
+
+        .open-badge {
+            background: #e6fffa;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+        }
+        
+        .leaderboard-table tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+        .baseline-row {
+            font-style: italic;
+            opacity: 0.8;
+            background-color: #f9fafb;
+        }
+        
+        .best-score {
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: #cbd5e0;
+            text-underline-offset: 2px;
+        }
+
+        .section-divider {
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .leaderboard-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+            
+            .leaderboard-table {
+                width: 1200px; /* Fixed width to ensure horizontal scrolling */
+                margin-left: 0;
+                font-size: 12px;
+                min-width: 1200px;
+            }
+            
+            .leaderboard-table th,
+            .leaderboard-table td {
+                padding: 8px;
+                white-space: nowrap;
+                min-width: 80px;
+            }
+            
+            .leaderboard-table td:first-child {
+                min-width: 180px;
+                max-width: 180px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-left: 12px;
+            }
+
+            /* Add scroll hint for mobile users */
+            .leaderboard-container::after {
+                content: "← Swipe to scroll →";
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 11px;
+                color: #666;
+                font-style: italic;
+                pointer-events: none;
+            }
+        }
+        </style>
+    <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-semantics {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mrow {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-mfrac {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-frac {
+  display: inline-block;
+  vertical-align: 0.17em;
+  padding: 0 .22em;
+}
+
+mjx-frac[type="d"] {
+  vertical-align: .04em;
+}
+
+mjx-frac[delims] {
+  padding: 0 .1em;
+}
+
+mjx-frac[atop] {
+  padding: 0 .12em;
+}
+
+mjx-frac[atop][delims] {
+  padding: 0;
+}
+
+mjx-dtable {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-dtable > * {
+  font-size: 2000%;
+}
+
+mjx-dbox {
+  display: block;
+  font-size: 5%;
+}
+
+mjx-num {
+  display: block;
+  text-align: center;
+}
+
+mjx-den {
+  display: block;
+  text-align: center;
+}
+
+mjx-mfrac[bevelled] > mjx-num {
+  display: inline-block;
+}
+
+mjx-mfrac[bevelled] > mjx-den {
+  display: inline-block;
+}
+
+mjx-den[align="right"], mjx-num[align="right"] {
+  text-align: right;
+}
+
+mjx-den[align="left"], mjx-num[align="left"] {
+  text-align: left;
+}
+
+mjx-nstrut {
+  display: inline-block;
+  height: .054em;
+  width: 0;
+  vertical-align: -.054em;
+}
+
+mjx-nstrut[type="d"] {
+  height: .217em;
+  vertical-align: -.217em;
+}
+
+mjx-dstrut {
+  display: inline-block;
+  height: .505em;
+  width: 0;
+}
+
+mjx-dstrut[type="d"] {
+  height: .726em;
+}
+
+mjx-line {
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  height: .06em;
+  border-top: .06em solid;
+  margin: .06em -.1em;
+  overflow: hidden;
+}
+
+mjx-line[type="d"] {
+  margin: .18em -.1em;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-munder {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-over {
+  text-align: left;
+}
+
+mjx-munder:not([limits="false"]) {
+  display: inline-table;
+}
+
+mjx-munder > mjx-row {
+  text-align: left;
+}
+
+mjx-under {
+  padding-bottom: .1em;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mover {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mover:not([limits="false"]) {
+  padding-top: .1em;
+}
+
+mjx-mover:not([limits="false"]) > * {
+  display: block;
+  text-align: left;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c4D::before {
+  padding: 0.683em 0.917em 0 0;
+  content: "M";
+}
+
+mjx-c.mjx-c52::before {
+  padding: 0.683em 0.736em 0.022em 0;
+  content: "R";
+}
+
+mjx-c.mjx-c41::before {
+  padding: 0.716em 0.75em 0 0;
+  content: "A";
+}
+
+mjx-c.mjx-c3D::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "=";
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "1";
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "0";
+}
+
+mjx-c.mjx-c2211.TEX-S1::before {
+  padding: 0.75em 1.056em 0.25em 0;
+  content: "\2211";
+}
+
+mjx-c.mjx-c1D703.TEX-I::before {
+  padding: 0.705em 0.469em 0.01em 0;
+  content: "\3B8";
+}
+
+mjx-c.mjx-c2208::before {
+  padding: 0.54em 0.667em 0.04em 0;
+  content: "\2208";
+}
+
+mjx-c.mjx-c1D436.TEX-I::before {
+  padding: 0.705em 0.76em 0.022em 0;
+  content: "C";
+}
+
+mjx-c.mjx-c28.TEX-S2::before {
+  padding: 1.15em 0.597em 0.649em 0;
+  content: "(";
+}
+
+mjx-c.mjx-c2223::before {
+  padding: 0.75em 0.278em 0.249em 0;
+  content: "\2223";
+}
+
+mjx-c.mjx-c2C6::before {
+  padding: 0.694em 0.5em 0 0;
+  content: "\2C6";
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: "y";
+}
+
+mjx-c.mjx-c2212::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "\2212";
+}
+
+mjx-c.mjx-c3C::before {
+  padding: 0.54em 0.778em 0.04em 0;
+  content: "<";
+}
+
+mjx-c.mjx-c29.TEX-S2::before {
+  padding: 1.15em 0.597em 0.649em 0;
+  content: ")";
+}
+</style></head>
+
+    <body>
+        <div class="header-wrapper">
+            <div class="header-container" id="header-container">
+                <div class="header-content">
+<div style="text-align: center;">
+  <h1 style="margin-bottom: 0;"><i>GIQ:</i></h1>
+  <div class="responsive-header">
+    <h2 style="margin-top: 5px;">
+      Benchmarking 3D Geometric Reasoning<br>
+      of Vision Foundation Models<br>
+      with Simulated and Real Polyhedra
+    </h2>
+  </div>
+</div>
+                      
+
+                        <div class="icon-container">
+                            <div class="icon-item">
+                                
+                                <img src="./main_files/icosahedron_icon.svg" alt="Visual Representation Icon">
+                                <div><strong>GIQ</strong>: 
+A benchmark for evaluating 3D geometric reasoning of foundation models using synthetic and real polyhedra.
+</div>
+                            </div>
+                            <div class="icon-item">
+                                <img src="./main_files/evaluation.svg" alt="Connector Design Icon">
+                                <div><strong>Evaluation</strong>: 
+We evaluate state-of-the-art models, revealing significant limitations in monocular 3D reconstruction, symmetry detection, mental rotation, and zero-shot shape classification.
+</div>
+                            </div>
+                            <div class="icon-item">
+                                <img src="./main_files/analyze_icon.svg" alt="Speech Logo" class="icon">
+                                <div><strong>Analysis</strong>: Our analysis shows that models struggle with detailed geometric differentiation, systematically misidentifying fundamental properties such as symmetry, convexity, and compound structures.</div>
+                            </div>
+                            <div class="icon-item">
+                                <img src="./main_files/impact_icon.svg" alt="Vision Logo" class="icon">
+                                <div><strong>Impact</strong>: GIQ highlights critical gaps in geometric intelligence, facilitating targeted improvements in robust, geometry-aware representation learning.</div>
+                            </div>
+                        </div>
+                    
+
+                    
+<div class="button-container" style="text-align: center;">
+    <a href="https://arxiv.org/abs/2506.08194" class="button paper-link" target="_blank">
+        <span class="icon is-small">
+            <img src="./main_files/arxiv_icon.svg" alt="Arxiv logo" style="height: 1em;">
+        </span>
+        arXiv
+    </a>
+    <a href="https://arxiv.org/pdf/2506.08194" class="button paper-link" target="_blank">
+        <span class="icon is-small">
+            <img src="./main_files/pdf_icon.svg" alt="PDF logo" style="height: 1em;">
+        </span>
+        <span>PDF</span>
+    </a>
+    <a href="https://github.com/TooManyMatts/giq-benchmark" class="button" target="_blank">
+        <span class="icon is-small">
+            <img src="./main_files/github_icon.svg" alt="Github logo" style="height: 1em;">
+        </span>
+        <span>Data</span>
+    </a>                      
+    <a href="https://youtube.com/watch?v=kNoCIohSk00" class="button" target="_blank">
+        <span class="icon is-small">
+            <img src="./main_files/youtube_icon.svg" alt="Youtube logo" style="height: 1em;">
+        </span>
+        <span>Video</span>
+    </a>
+</div>
+                </div>
+                <div class="header-image">
+                    <img draggable="false" src="./main_files/fig_1_ref_300dpi.png" alt="Teaser Image" class="teaser-image">
+                </div>
+            </div>
+        </div>
+    <d-article>
+
+        
+        <div class="byline">
+            <div class="byline-container">
+                <div class="byline-column" style="line-height: 1.2;">
+                    <h3 style="font-size: 1.2em; margin-bottom: 0.2em;">Authors</h3>
+                    <p style="margin: 0;">
+                        <a href="https://toomanymatts.github.io/" class="author-link" target="_blank" style="font-size: 0.9em;">Mateusz Michalkiewicz</a> 
+                        <sup style="font-size: 0.9em;">▲</sup>
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="https://www.linkedin.com/in/anekha/" class="author-link" target="_blank" style="font-size: 0.9em;">Anekha Sokhal</a> 
+                        <sup style="font-size: 0.9em;">▲</sup>
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="" class="author-link" target="_blank" style="font-size: 0.9em;">Tadeusz Michalkiewicz</a> 
+                        <sup style="font-size: 0.9em;">●</sup>
+                    </p>
+                    <p style="margin: 0;">
+                    <a href="" class="author-link" target="_blank" style="font-size: 0.9em;">Piotr Pawlikowski</a> 
+                        <sup style="font-size: 0.9em;">●</sup>
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="https://about.uq.edu.au/experts/23393" class="author-link" target="_blank" style="font-size: 0.9em;">Mahsa Baktashmotlagh</a> 
+                        <sup style="font-size: 0.9em;">■</sup>
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="https://varunjampani.github.io/" class="author-link" target="_blank" style="font-size: 0.9em;">Varun Jampani</a> 
+                        <sup style="font-size: 0.9em;">★</sup>
+                    </p>
+                    <p style="margin: 0;">
+                        <a href="https://www.guhabalakrishnan.com/" class="author-link" target="_blank" style="font-size: 0.9em;">Guha Balakrishnan</a> 
+                        <sup style="font-size: 0.9em;">▲</sup>
+                    </p>
+                </div>
+                
+                <div class="byline-column" style="line-height: 1.2;">
+                    <h3 style="font-size: 1.2em; margin-bottom: 0.2em;">Affiliations</h3>
+                    <p style="margin: 0;">
+                        <sup style="font-size: 0.8em;">▲</sup>
+                        <a href="https://www.rice.edu/" class="affiliation-link" target="_blank" style="font-size: 0.9em;">Rice University</a>
+                    </p>
+                    <p style="margin: 0;">
+                        <sup style="font-size: 0.8em;">■</sup>
+                        <a href="https://uq.edu.au/" class="affiliation-link" target="_blank" style="font-size: 0.9em;">The University of Queensland</a>
+                    </p>
+                    <p style="margin: 0;">
+                        <sup style="font-size: 0.8em;">★</sup>
+                        <a href="https://stability.ai/" class="affiliation-link" target="_blank" style="font-size: 0.9em;">Stability AI</a>
+                    </p>
+                    <p style="margin: 0;">
+                        <sup style="font-size: 0.8em;">●</sup>
+                        <a href="" class="affiliation-link" target="_blank" style="font-size: 0.9em;">Independent Researcher</a>
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                
+                <div class="byline-column" style="line-height: 1.2;">
+                    <h3 style="font-size: 1.2em; margin-bottom: 0.2em;">Date</h3>
+                    <p style="margin: 0; font-size: 0.9em;">
+                        Jun. 9<sup style="font-size: 0.8em;">th</sup>, 2025
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+<script>
+function toggleAnswer(answerId, element) {
+    const answerElement = document.getElementById(answerId);
+    const isVisible = answerElement.style.display === "block";
+
+    if (isVisible) {
+        answerElement.style.display = "none";
+        element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLM\'s answer!</strong>';
+    } else {
+        answerElement.style.display = "block";
+        element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+  
+        if (window.innerWidth <= 768) {
+            // answerElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+}
+
+
+
+    </script>
+<script>
+    function toggleAnswer2(answerId, element) {
+        const answerElement = document.getElementById(answerId);
+    
+        if (answerElement.style.visibility === "hidden" || answerElement.style.visibility === "") {
+            answerElement.style.transition = "none";
+            answerElement.style.visibility = "visible";
+            answerElement.style.opacity = "1";
+            answerElement.style.maxHeight = "500px";
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Hide answer</strong>';
+        } else {
+            // Hide the answer instantly
+            answerElement.style.transition = "none";
+            answerElement.style.opacity = "0";
+            answerElement.style.maxHeight = "0";
+            answerElement.style.visibility = "hidden";
+            element.innerHTML = '<img src="static/img/icons/teaser.gif" style="width:1.5rem"> <strong>Click to view Ground Truth and MLLM\'s answer!</strong>';
+        }
+    }
+    </script>
+        
+
+
+   <div style="text-align: center;">
+  <h2 style="margin-bottom: 5px;">Abstract</h2>
+</div> 
+        <p class="text abstract">
+<p class="text abstract">
+Foundation 3D reconstruction and 2D vision models show impressive benchmark results, but their geometric understanding remains unclear. We introduce <i>GIQ</i>, a benchmark for evaluating the 3D geometric reasoning of vision and vision-language models. <i>GIQ</i> contains synthetic and real-world images with 3D meshes of diverse polyhedra, covering various complexities and symmetries. Our experiments reveal significant shortcomings: state-of-the-art models struggle with basic shape reconstruction, symmetry detection, mental rotation, and zero-shot shape classification, frequently misinterpreting properties like convexity and compound structures. <i>GIQ</i> highlights these critical gaps, facilitating targeted improvements in geometry-aware learning.
+</p>
+            <br>
+        </p>
+
+    <!-- Paper video. -->
+<h2 class="title is-3">Summary Video</h2>
+<div class="publication-video">
+  <iframe
+    src="https://www.youtube.com/embed/kNoCIohSk00?rel=0&amp;showinfo=0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
+    <!--/ Paper video. -->
+
+    
+    <div class="icon-row">
+        <a href="#vsi-benchmark" class="icon-link">
+            <img src="./main_files/icosahedron_icon.svg" alt="Dataset Logo" class="icon">
+            Dataset
+        </a>
+<a href="#vsi-evaluation" class="icon-link">
+  <img src="./main_files/camera_icon.svg" alt="3DR Logo" class="icon">
+  Monocular 3D<br>Reconstruction
+</a>
+        <a href="#vsi-leaderboard" class="icon-link">
+            <img src="./main_files/mirror_icon.svg" alt="3D Symmetry Logo" class="icon">
+            3D Symmetry<br>Detection
+        </a>
+        <a href="#visual-representation" class="icon-link">
+            <img src="./main_files/rotation_icon.svg" alt="Rotation Logo" class="icon">
+            Mental Rotation<br>Test
+        </a>
+        <a href="#vsi-improvements" class="icon-link">
+            <img src="./main_files/checklist_icon.svg" alt="Vision Logo" class="icon">
+            Zero-Shot<br>Shape Classification
+        </a>
+    </div>
+
+
+        <p class="click-hint2" style="width: 85%;">
+            <img src="./main_files/click.gif" style="width: 1.5rem">
+            <strong>Click to jump to each section.</strong>
+        </p>
+        
+
+        <hr>
+
+<div id="vsi-benchmark" class="vsi-benchmark">
+    <h1 class="text">Dataset</h1>
+    <p class="text" align="justify"><strong>3D Meshes:</strong>
+Our dataset systematically explores geometric complexity, symmetry, and topological regularity through a carefully curated collection of 224 polyhedra, ranging from simple, highly symmetric forms to intricate, nonconvex, and irregular shapes. Specific counts are summarized in <a href="#fig-giq-groups">Table 1</a>.
+    </p>
+
+                <d-figure id="fig-giq-groups">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./main_files/giq_groups.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                        <figcaption style="text-align: center; margin-top: 20px;">
+                            <strong>Table 1</strong>: Summary of polyhedral groups in the GIQ dataset, highlighting key geometric characteristics
+and representative examples. Platonic, Archimedean, and Catalan solids are convex, while Kepler-
+Poinsot polyhedra and compounds represent special cases of stellations. The categorization presented
+here is arbitrary: polyhedra possess numerous properties allowing various groupings; we selected this
+set as a representative example.                        </figcaption>
+                    </figure>
+                </d-figure>
+
+ <p class="text" align="justify"><strong>Synthetic Renderings:</strong>
+
+To systematically evaluate spatial reasoning, we render each of the 224 polyhedra from 20 viewpoints uniformly distributed over the viewing hemisphere. We use the Mitsuba renderer with a 256×256 perspective camera, employing diffuse shading and a two-sided, high-reflectance yellowish BRDF for realistic lighting. Representative renderings are shown in <a href="#fig-giq-synth">Figure 1</a>.
+    </p>
+
+                <d-figure id="fig-giq-synth">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./main_files/render_samples.png" alt="benchmark category" style="width: 70%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                        <figcaption style="text-align: center; margin-top: 20px;">
+                            <strong>Figure 1</strong>:  Simulated solids from Mitsuba Physically Based Renderer. </figcaption>
+                    </figure>
+                </d-figure>
+
+ <p class="text" align="justify"><strong>Real-World Images:</strong>
+We complement our synthetic dataset with physically constructed models (meticulously assembled by Piotr Pawlikowski) for a representative subset of polyhedra, photographed under diverse indoor (3,371 images) and outdoor (3,601 images) conditions. This approach introduces natural variability in lighting, backgrounds, and viewpoints, enabling comprehensive evaluation across controlled and real-world scenarios. Representative images are shown in <a href="#fig-giq-wild">Figure 2</a>. Interactive examples of image-model pairs from our dataset are presented in <a href="#fig3-caption">Figure 3</a>.
+    </p>
+                
+                <d-figure id="fig-giq-wild">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./main_files/wild_samples.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                        <figcaption style="text-align: center; margin-top: 20px;">
+                            <strong>Figure 2</strong>: Real polyhedra constructed from paper, placed in different realistic backgrounds. </figcaption>
+                    </figure>
+                </d-figure>
+
+
+    <!-- Grid Container -->
+    <div id="viewer-grid" style="display:grid; grid-template-columns:repeat(2,300px); grid-gap:120px;"></div>
+
+
+
+
+<!-- Anchor explicitly placed above the figure -->
+<div id="viewer-grid"></div>
+
+<!-- (Figure 6) -->
+<div style="margin-top:2px; display:flex; flex-wrap:wrap; justify-content:center; gap:5px;">
+  <p id="fig3-caption" style="width:100%; text-align:center; font-style:italic; margin-top:-80px;">
+    Figure 3: Example images paired with their interactive 3D models. Click “Go 3D” to explore each model.
+  </p>
+</div>
+
+<!-- Include model-viewer library -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<script>
+const shapes = [
+    { jpg: "main_files/cid_13.jpg", glb: "main_files/cid_13.glb" },
+    { jpg: "main_files/jid_34.jpg", glb: "main_files/jid_34.glb" },
+    { jpg: "main_files/wid_26.jpg", glb: "main_files/wid_26.glb" },
+    { jpg: "main_files/wid_27.jpg", glb: "main_files/wid_27.glb" }
+];
+
+function renderGrid() {
+    const grid = document.getElementById('viewer-grid');
+    grid.innerHTML = '';
+
+    shapes.forEach(shape => {
+        const div = document.createElement('div');
+        div.className = 'viewer-item';
+        div.style.cssText = 'position:relative;width:400px;height:auto;'; // height reduced here
+        div.innerHTML = `
+            <img src="${shape.jpg}" style="width:100%;height:auto;display: block;">
+            <button class="toggle-3d" data-glb="${shape.glb}" data-jpg="${shape.jpg}" style="position:absolute;top:15px;right:15px;">Go 3D</button>
+        `;
+        grid.appendChild(div);
+    });
+
+    // Shift second row upward
+    const items = document.querySelectorAll('#viewer-grid .viewer-item');
+    items.forEach((item, idx) => {
+        if (idx >= 2) {
+            item.style.transform = 'translateY(-100px)';
+        }
+    });
+    attachToggleListeners();
+}
+
+function attachToggleListeners() {
+    document.querySelectorAll('.toggle-3d').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const container = this.parentElement;
+            const glbSrc = this.getAttribute('data-glb');
+            const jpgSrc = this.getAttribute('data-jpg');
+
+            if (this.textContent === "Go 3D") {
+                container.innerHTML = `
+                    <model-viewer
+                        src="${glbSrc}"
+                        camera-controls
+                        auto-rotate
+                        exposure="0.1"
+                        shadow-intensity="0.4"
+                        style="width:100%;height:100%;object-fit:contain;">
+                    </model-viewer>
+                    <button class="toggle-3d" data-glb="${glbSrc}" data-jpg="${jpgSrc}" style="position:absolute;top:15px;right:15px;z-index:1;">Go 2D</button>`;
+            } else {
+                container.innerHTML = `
+                    <img src="${jpgSrc}" style="width:100%;height:100%;object-fit:contain;">
+                    <button class="toggle-3d" data-glb="${glbSrc}" data-jpg="${jpgSrc}" style="position:absolute;top:15px;right:15px;">Go 3D</button>`;
+            }
+            container.querySelector('.toggle-3d').addEventListener('click', arguments.callee);
+        });
+    });
+}
+
+// Initial load
+renderGrid();
+</script>
+
+
+        <div id="vsi-evaluation" class="vsi-evaluation">
+            <h1 class="text">Monocular 3D Reconstruction</h1>
+
+
+                    <script type="text/javascript" id="MathJax-script" async="" src="./main_files/tex-mml-chtml.js">
+                    </script>
+                                <p class="text" align="justify"><strong>Experimental Setup</strong>:
+The experimental task involves reconstructing the complete 3D geometry of polyhedral shapes from a single image. We selected representative examples across three distinct categories—cube (Platonic solid), great dodecahedron (Kepler-Poinsot solid), and small cubicuboctahedron (uniform nonconvex solid)—evaluating each on both synthetic renderings and real-world (wild) photographs. To provide a fair comparison and align with training conditions, wild images were preprocessed via center cropping and background removal.
+            </p>
+            <p class="text" align="justify"><strong>Reconstruction Methods</strong>:
+  We benchmarked three monocular 3D reconstruction methods on our polyhedral dataset:
+              <strong>Stable Fast 3D</strong> utilizes a transformer-based architecture, encoding images with DINOv2 and outputting triplane-based shape representations. It was trained on a curated subset of Objaverse, incorporating diverse geometries and appearances; 
+<strong>Shap-E</strong>, a diffusion-based generative model trained on several million diverse 3D assets collected from the internet. Shap-E employs a Transformer-based encoder to generate parameters for implicit neural representations, followed by a diffusion model trained on these encoded outputs, enabling direct rendering into textured 3D meshes;             
+<strong>OpenLRM</strong>, based on the Large Reconstruction Model (LRM), uses a transformer-based architecture to directly predict a neural radiance field from single images, trained end-to-end with image reconstruction losses. OpenLRM was trained on Objaverse, a collection of approximately 800K diverse 3D assets, and MVImgNet, consisting of around 6.5 million frames from 219,188 videos across 238 object classes. </p>
+
+
+            <p class="text" align="justify"><strong>Main Results</strong>:
+Results from this evaluation are presented in   <a href="#tbl-recon-results">Figure 4</a>. Despite extensive training on millions of diverse shapes (Shap-E) or inclusion of similar solids in the training dataset (OpenLRM), all three models exhibited significant reconstruction failures for most tested cases, particularly on wild images and shapes beyond the simplest forms. Shap-E successfully reconstructed the synthetic cube but failed dramatically on the wild cube and more complex shapes. Stable Fast 3D accurately captured front-facing geometries for several shapes but consistently failed to coherently reconstruct side and rear views. Similarly, OpenLRM produced plausible reconstructions for simple synthetic shapes but exhibited considerable inaccuracies across viewpoints and struggled substantially with complex and wild imagery. These results underscore critical limitations of current monocular reconstruction approaches in capturing fundamental geometric properties from single images, even when trained on extensive, diverse datasets containing similar geometric primitives.
+            </p>
+
+
+<!-- Animation Section -->
+<div class="columns is-centered">
+  <figure id="tbl-recon-results" style="text-align:center; margin-top:1rem; width:90%; margin-left:auto; margin-right:auto;">
+  <!-- Instruction -->
+  <p style="
+      margin: 0;            /* no extra space above or below */
+      margin-bottom: 0.25rem;
+      font-style: italic;
+      font-size: 1.2rem;    /* larger text */
+    ">
+   (Drag the slider to rotate the shapes)
+  </p>
+
+    <!-- Top slider -->
+    <input
+      type="range" min="0" max="35" value="0"
+      id="slider-top"
+      style="width: 400px; transform: scale(1.5); transform-origin: center; margin-top: 1rem;"
+    />
+    <br/><br/>
+
+    <!-- Image -->
+    <img
+      id="slider-image"
+      src="main_files/frame_000.png"
+      width="600"
+    />
+    <br/><br/>
+
+    <!-- Bottom slider -->
+    <input
+      type="range" min="0" max="35" value="0"
+      id="slider-bottom"
+      style="width: 400px; transform: scale(1.5); transform-origin: center; margin-top: 1rem;"
+    />
+
+    <!-- Caption -->
+    <figcaption style="margin-top:0.5rem; font-style:italic;">
+      Figure 4: Monocular 3D reconstruction results. Each method outputs the selected renderings per input view. Rows depict pairs of synthetic and wild images of a cube (platonic solid), great dodecahedron (Kepler-Poinsot solid), and small cubicuboctahedron (uniform nonconvex solid).
+    </figcaption>
+  </figure>
+
+  <script>
+    const sliderTop    = document.getElementById('slider-top');
+    const sliderBottom = document.getElementById('slider-bottom');
+    const img          = document.getElementById('slider-image');
+
+    function updateFrame(value) {
+      const frameNumber = String(value).padStart(3, '0');
+      img.src = `main_files/frame_${frameNumber}.png`;
+      sliderTop.value    = value;
+      sliderBottom.value = value;
+    }
+
+    sliderTop.oninput = function() {
+      updateFrame(this.value);
+    };
+
+    sliderBottom.oninput = function() {
+      updateFrame(this.value);
+    };
+  </script>
+</div>
+<!--/ Animation Section -->
+
+        
+<div class="highlight-box" style="font-size:1.5rem;">
+                    <em>Finding 1:     Advanced monocular 3D reconstruction methods trained on several million 3D assets struggle to accurately reconstruct even simple geometric shapes.</em>
+                </div>
+           
+            
+
+
+
+
+
+<!-- 3D Symmetry Detection Section -->
+<div id="vsi-leaderboard" class="vsi-leaderboard">
+  <h1 class="text">3D Symmetry Detection</h1>
+
+<p class="text" align="justify">
+  <strong>Experimental Setup</strong>:
+We evaluated the capability of various featurizers to detect specific 3D symmetry elements from single-image inputs. The task involved predicting the presence of three distinct symmetry elements in objects depicted by images (illustrated in <a href="#fig-symmetries">Figure 5</a>): central point reflection (invariance under inversion through a central point), 4-fold rotational symmetry (invariance under rotation by 90 degrees), and 5-fold rotational symmetry (invariance under rotation by 72 degrees). Unlike common evaluations focused on 2D planar symmetries or image rotations, our evaluation explicitly targets recognition of inherent symmetry elements defined with respect to the object's three-dimensional structure.
+</p>
+
+
+<figure id="fig-symmetries" style="text-align:center; margin-top:1rem;">
+  <div class="symmetry-gifs" style="display:flex; justify-content:space-around; gap:1rem;">
+    <img src="main_files/letter_col.gif" alt="Central point reflection" style="width:285px;"/>
+    <img src="main_files/cube_hq.gif"      alt="4-fold rotational symmetry" style="width:385px;"/>
+    <img src="main_files/dod_hq.gif"       alt="5-fold rotational symmetry" style="width:385px;"/>
+  </div>
+  <figcaption style="font-style:italic; margin-top:0.5rem;">
+    Figure 5: Three 3D symmetry elements (left to right) – central point reflection, 4-fold rotational symmetry, 5-fold rotational symmetry.
+  </figcaption>
+</figure>
+</div>
+
+<p class="text" align="justify">
+  <strong>Featurizer Selection</strong>:
+To probe the inherent 3D understanding of widely-used featurizers, we examined a diverse set of models covering different modalities, architectures, and supervision strategies. Specifically, we selected six supervised methods, three of which are image-and-text transformer-based models (CLIP, DreamSim, SigLip), and three image-based ones (DeiT III, SAM, and ConvNext), with ConvNext utilizing a convolutional-based architecture. Additionally, we considered three self-supervised transformer-based methods trained solely on images: DINO, DINOv2, and Masked AutoEncoder (MAE).
+</p>
+
+<p class="text" align="justify">
+  <strong>Main Results:</strong>:
+  Results of our evaluation are presented in <a href="#tbl-symmetry-featurizers">Table 2</a>. Notably, DINOv2 consistently delivered superior performance across symmetry categories, particularly excelling in the recognition of 4-fold rotational symmetry, achieving up to 93% accuracy on wild images despite being trained only on synthetic data. This result highlights that DINOv2’s image embeddings inherently capture fundamental 3D structural properties without explicit 3D supervision, demonstrating the potential of foundation models to implicitly encode 3D structure.
+These findings open the door to utilizing symmetry detection as a lightweight, plug-and-play module in downstream tasks by leveraging pretrained vision encoders like DINOv2. 
+</p>
+
+<figure id="tbl-symmetry-featurizers" style="text-align: center; margin-top: 1rem;">
+  <style>
+    /* Stretch the whole table */
+    #tbl-symmetry-featurizers .data-table {
+      width: 90%;        /* or 100% if you want full width */
+      max-width: 1200px; /* optional cap */
+      margin: 0 auto;    /* center horizontally */
+      border-collapse: collapse;
+    }
+
+    /* Center all cell content and allow wrapping */
+    #tbl-symmetry-featurizers .data-table th,
+    #tbl-symmetry-featurizers .data-table td {
+      text-align: center;
+      vertical-align: middle;
+      white-space: normal;
+      word-break: break-word;
+      padding: 4px;
+      border: 1px solid #ccc;
+      font-size: 22px;    
+    }
+  </style>
+
+  <table class="data-table">
+  <thead>
+      <tr>
+        <th rowspan="2" style="border: 1px solid #ccc; padding: 4px;">Featurizer</th>
+        <th colspan="2" style="border: 1px solid #ccc; padding: 4px;">Central point <br> reflection</th>
+        <th colspan="2" style="border: 1px solid #ccc; padding: 4px;">5-fold <br> rotation</th>
+        <th colspan="2" style="border: 1px solid #ccc; padding: 4px;">4-fold <br>  rotation</th>
+      </tr>
+      <tr>
+        <th style="border: 1px solid #ccc; padding: 4px;">Syn</th>
+        <th style="border: 1px solid #ccc; padding: 4px;">Wild</th>
+        <th style="border: 1px solid #ccc; padding: 4px;">Syn</th>
+        <th style="border: 1px solid #ccc; padding: 4px;">Wild</th>
+        <th style="border: 1px solid #ccc; padding: 4px;">Syn</th>
+        <th style="border: 1px solid #ccc; padding: 4px;">Wild</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">DINOv2</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.85</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><u>0.73</u></td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.97</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><strong>0.85</strong></td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.96</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><strong>0.93</strong></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">CLIP</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.82</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><strong>0.74</strong></td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.80</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.78</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.74</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.69</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">ConvNeXt</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.76</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.62</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.93</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><strong>0.85</strong></td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.90</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><u>0.76</u></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">SigLip</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.69</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.59</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.86</td>
+        <td style="border: 1px solid #ccc; padding: 4px;"><u>0.79</u></td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.78</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.74</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">MAE</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.70</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.66</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.82</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.71</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.74</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.71</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">DeiT III</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.75</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.65</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.82</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.72</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.70</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.65</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">DreamSim</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.77</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.71</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.78</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.71</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.68</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.63</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">SAM</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.74</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.73</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.79</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.68</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.68</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.59</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 4px;">DINO</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.66</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.62</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.88</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.71</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.87</td>
+        <td style="border: 1px solid #ccc; padding: 4px;">0.61</td>
+      </tr>
+    </tbody>
+  </table>
+  <figcaption style="font-style: italic; margin-top: 0.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+    Table 2: Balanced accuracy (0.5·TP/P + 0.5·TN/N) for linear probing of 3D symmetry detection using embeddings from different featurizers. The classifier is trained on synthetic images (Syn) and evaluated on both synthetic and real-world (Wild) inputs. Bold indicates best accuracy; underline indicates second best.
+  </figcaption>
+</figure>
+
+<div class="highlight-box" style="font-size:1.5rem;">
+                    <em>Finding 2:  DINOv2 reliably detects proper rotational symmetries, opening the door to using pretrained vision encoders as lightweight symmetry detection modules for downstream tasks.</em>
+                </div>
+
+
+            <div id="visual-representation" class="viusal-representation-block">
+            <h1 class="text">Mental Rotation Test</h1>
+                
+                <p class="text" align="justify">
+                    <strong>Experimental Setup</strong>:
+We evaluate foundation models' spatial reasoning capabilities through a Mental Rotation Test (MRT). This task involves determining whether two images—one synthetic rendering and one real-world (wild) photograph—depict the same polyhedral object, differing only by rotation. Such a scenario is relevant to real-world applications, for instance, a robot trained on CAD models needing to locate a physical object with matching geometric properties in an unstructured environment. Thus, this setup provides valuable insights from both analytical and practical perspectives.
+                </p>
+
+                              
+                
+                <p class="text" align="justify">
+                    <strong>Test Set Selection</strong>:
+                      We employ a challenging <em>hard</em> split—composed of visually and geometrically similar polyhedral pairs—to rigorously test fine-grained shape differentiation. Examples of these challenging shape pairs are shown in <a href="#fig-case-study">Table 3</a>.
+                </p>
+
+                <d-figure id="fig-case-study">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./main_files/mrt_pairs.png" alt="benchmark category" style="width: 90%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                        <figcaption style="text-align: center; margin-top: 20px;">
+                            <strong>Table 3</strong>: Samples of visually and geometrically similar synthetic-wild shape pairs used in the <i>hard</i>
+test set. Pairs were manually selected based on structural and visual similarities, such as shared
+symmetries, vertex configurations, and derivation from common polyhedra (e.g., pair 6: Small
+Cubicuboctahedron and Small Rhombihexahedron, both derived from the Rhombicuboctahedron).
+                        </figcaption>
+                    </figure>
+                </d-figure>
+
+                <p class="text" align="justify">
+                    <strong>Main Results:</strong>:
+Results are summarized in <a href="#fig-zero-shot">Figure 6</a>. We investigated two experimental scenarios: (a) training and testing exclusively on synthetic images, and (b) training and testing entirely on mixed pairs (synthetic-wild). All models exhibited a significant performance drop compared to the trivial split, particularly in the synthetic-wild test scenario, where average performance approached chance level. While ConvNext achieved the highest accuracy of 60\% in the mixed pairs scenario, this remains close to random guessing, highlighting the considerable difficulty models face in reliably distinguishing subtle geometric differences readily apparent to humans.
+Overall, these experiments reveal substantial limitations in current foundation models' embeddings to accurately differentiate geometrically similar shapes, especially when generalizing from synthetic to real-world imagery. This highlights the need for targeted improvements in vision featurizers to robustly capture nuanced geometric distinctions.
+                </p>
+
+
+
+
+            </div>
+                <d-figure id="fig-zero-shot">
+                    <figure>
+                        <img data-zoomable="" draggable="false" src="./main_files/mrt_results.png" alt="benchmark category" style="width: 100%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                        <figcaption style="text-align: center; margin-top: 20px;">
+                            <strong>Figure 6</strong>: Mental Rotation Test accuracy for classification of ``negative'' (visually similar but different) shape pairs. Left: models trained and tested on synthetic pairs (Syn-Syn). Right: models trained and tested on synthetic-wild pairs (Syn-Wild), showing accuracy near chance (dark red dashed line).
+                        </figcaption>
+                    </figure>
+                </d-figure>           
+        </div>
+
+<div class="highlight-box" style="font-size:1.5rem;">
+                    <em>Finding 3: Foundation vision and vision-language models fail to reliably differentiate geometrically similar shapes—highlighting a core limitation in their spatial reasoning abilities.</em>
+                </div>
+
+
+            <div id="vsi-world" class="vsi-world">
+
+                <div id="vsi-improvements" class="vsi-improvements">
+
+                <h1 class="text"> Zero-Shot Shape Classification</h1>
+
+                    <p class="text" align="justify">
+                        <strong>Experimental Setup</strong>:
+                        We conducted a zero-shot polyhedron classification task to evaluate the geometric reasoning capabilities of frontier vision-language models. Specifically, we assessed Claude 3.7 Sonnet, Gemini 2.5 Pro, ChatGPT o3, and ChatGPT o4-mini-high by prompting each model with synthetic and real-world images from our dataset, asking simply: <em>What is the name of this polyhedron?</em>
+                    </p>
+
+                    <p class="text" align="justify">
+                        <strong>Quantitative Results</strong>:
+                        Classification accuracy across polyhedron categories is reported in  <a href="#fig-cog-map">Figure 7</a>.
+Model performance varied significantly across polyhedron categories. Gemini 2.5 Pro achieved perfect accuracy for Kepler-Poinsot solids, while ChatGPT o3 demonstrated perfect score on Platonic solids. Conversely, all models struggled with Johnson solids, Catalan solids, uniform non-convex solids, and compound structures, highlighting significant challenges these intricate geometric classes pose.
+                    </p>
+                    <d-figure id="fig-cog-map">
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="./main_files/0shot_quant.png" alt="Cognitive Map" style="width: 90%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                            <figcaption style="text-align: center; margin-top: 20px;">
+                                <strong>Figure 7</strong>: Zero-shot classification accuracy of various frontier models across polyhedron categories using wild images.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+
+
+                    <p class="text" align="justify">
+                        <strong>Reasoning Analysis</strong>:
+To better understand the reasoning behind classification errors, we qualitatively analyzed representative model responses shown in 
+<a href="#fig-0shot-reason">Table 4</a>. These examples illustrate significant systematic gaps in geometric reasoning capabilities of current frontier vision-language models, underscoring the necessity of enhanced mechanisms for explicit geometric representation and reasoning to reliably differentiate complex geometric structures.
+                    </p>
+
+                    <d-figure id="fig-0shot-reason">
+                        <figure>
+                            <img data-zoomable="" draggable="false" src="./main_files/0shot_reason.png" alt="Cognitive Map" style="width: 90%; display: block; margin: 0 auto;" class="medium-zoom-image">
+                            <figcaption style="text-align: center; margin-top: 20px;">
+                                <strong>Table 4</strong>: Examples of failure cases illustrating errors in reasoning by frontier models that led to misclassification of
+polyhedra. These cases highlight systematic mistakes in geometric recognition, such as misidentification of face
+geometry, convexity, and compound structures. Text highlighted in <span style="color:green;">green color</span> indicates correct statements, while text in <span style="color:red;">red color</span> indicates incorrect reasoning.
+                            </figcaption>
+                        </figure>
+                    </d-figure>
+                    
+                    
+
+                </div>
+
+        </div>
+        
+    
+<div class="highlight-box" style="font-size:1.5rem;">
+                        <em>Finding 4: Contemporary frontier models routinely misinterpret fundamental geometric properties such as convexity and face geometry.</em>
+                    </div>
+
+       
+
+        <div id="conclusion" style="position: relative; margin-top: 40px; margin-bottom: 0px;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px">Conclusion</h2>
+            <p class="text" align="justify">
+We introduced GIQ, a novel benchmark designed to systematically assess the geometric reasoning capabilities of contemporary foundation vision and vision-language models using both synthetic and real-world polyhedral structures. Our extensive evaluations reveal notable discrepancies in current state-of-the-art models, highlighting a substantial disconnect between their impressive capabilities on standard benchmarks and their performance in tasks requiring explicit geometric reasoning. While certain models excel at implicitly recognizing specific 3D symmetry elements, they simultaneously exhibit significant shortcomings in differentiating geometrically similar shapes and accurately reconstructing even basic polyhedral forms from single images. Additionally, our zero-shot classification experiments revealed systematic errors in geometric reasoning, with frontier models frequently misidentifying fundamental properties such as face geometry, convexity, and compound structures, particularly in complex non-convex polyhedral classes.
+Thus, GIQ serves as a critical diagnostic tool for future research, providing a targeted evaluation framework to drive the development of more robust, geometry-aware foundation models capable of human-level spatial reasoning.
+
+            </p>
+        </div>
+
+        <div id="bibtex" style="position: relative; margin-top: 40px; margin-bottom: 0px; color: gray;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px">BibTeX</h2>
+            <!-- <p class="bibtex">
+                @article{yang2024think,<br>
+                    title={{Thinking in Space: How Multimodal Large Language Models See, Remember and Recall Spaces}},<br>
+                    author={Yang, Jihan and Yang, Shusheng and Gupta, Anjali and Han, Rilyn and Fei-Fei, Li and Xie, Saining},<br>
+                    year={2024},<br>
+                    journal={arXiv preprint},<br>
+                }
+            </p> -->
+            <pre><code>@article{michalkiewicz2025giq,
+  title={GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra},
+  author={Michalkiewicz, Mateusz and Sokhal, Anekha and Michalkiewicz, Tadeusz and Pawlikowski, Piotr and Baktashmotlagh, Mahsa and Jampani, Varun and Balakrishnan, Guha},
+  journal={arXiv preprint arXiv:2506.08194},
+  year={2025}
+}</code></pre>
+        </div>
+
+    
+
+        <!-- </d-article>
+        
+        <d-appendix>
+
+            
+        </d-appendix>  
+        <d-bibliography src="bibliography.bib"></d-bibliography>
+        <script src="/static/js/nav-bar.js"></script> -->
+
+<!-- Leaderboard Sorting JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const table = document.querySelector('.leaderboard-table');
+    if (!table) return; // Exit if table doesn't exist
+    
+    const thead = table.querySelector('thead');
+    const tbody = document.getElementById('leaderboard-body');
+    
+    // Default sort configuration: by 'Avg.' column (index 4), descending.
+    let sortConfig = {
+        columnIndex: 4, 
+        direction: 'desc'
+    };
+
+    const headers = thead.querySelectorAll('th[data-column-index]');
+
+    // Updates the visual indicators (▲/▼) on the table headers.
+    function updateSortIndicators() {
+        headers.forEach(h => {
+            const indicator = h.querySelector('.sort-indicator');
+            if (indicator) {
+                const hIndex = parseInt(h.dataset.columnIndex);
+                if (hIndex === sortConfig.columnIndex) {
+                    indicator.textContent = sortConfig.direction === 'asc' ? '▲' : '▼';
+                    h.classList.add('active');
+                } else {
+                    indicator.textContent = '';
+                    h.classList.remove('active');
+                }
+            }
+        });
+    }
+    
+    // Parses the 'LLM Params' column, converting values like '7B' or '500M' to numbers.
+    function parseParams(param) {
+        if (param === '-') return -1;
+        const value = parseFloat(param);
+        if (isNaN(value)) return -1;
+        if (param.toLowerCase().includes('b')) return value * 1e9;
+        if (param.toLowerCase().includes('m')) return value * 1e6;
+        return value;
+    }
+
+    // Generic comparison function for sorting. Handles strings, dates, params, and numbers.
+    function compareValues(valA, valB, index) {
+        // Column 0: Model name (string comparison)
+        if (index === 0) { 
+            return valA.localeCompare(valB);
+        }
+        // Column 1: LLM Params (special parsing)
+        if (index === 1) { 
+            return parseParams(valA) - parseParams(valB);
+        }
+        // Column 3: Date (date comparison)
+        if (index === 3) { 
+            return new Date(valA) - new Date(valB);
+        }
+
+        // Default: Numeric comparison for all other columns
+        const numA = parseFloat(valA);
+        const numB = parseFloat(valB);
+
+        const isNumA = !isNaN(numA);
+        const isNumB = !isNaN(numB);
+
+        if (isNumA && isNumB) return numA - numB;
+        if (isNumA) return 1; // Put non-numeric values ('-') at the bottom
+        if (isNumB) return -1;
+        return 0;
+    }
+
+    // Main function to sort the table body.
+    function sortTable() {
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        
+        // Filter out rows that should not be sorted (e.g., section headers, baselines).
+        const sortableRows = rows.filter(row => 
+            !row.classList.contains('baseline-row') &&
+            !row.classList.contains('human-level-row') &&
+            !row.classList.contains('section-divider') &&
+            !row.classList.contains('section-header')
+        );
+        
+        const direction = sortConfig.direction === 'asc' ? 1 : -1;
+
+        // Sort the filtered rows based on the selected column and direction.
+        sortableRows.sort((rowA, rowB) => {
+            const cellA = rowA.children[sortConfig.columnIndex].textContent.trim();
+            const cellB = rowB.children[sortConfig.columnIndex].textContent.trim();
+            return compareValues(cellA, cellB, sortConfig.columnIndex) * direction;
+        });
+
+        // Append the sorted rows back to the table body.
+        // This moves them to the end, after the non-sortable rows which were not removed.
+        sortableRows.forEach(row => tbody.appendChild(row));
+        updateSortIndicators();
+    }
+
+    // Add click listeners to all sortable headers.
+    headers.forEach(header => {
+        header.classList.add('sortable-header');
+        const indicator = document.createElement('span');
+        indicator.className = 'sort-indicator';
+        header.appendChild(indicator);
+
+        header.addEventListener('click', () => {
+            const columnIndex = parseInt(header.dataset.columnIndex);
+            // If clicking the same column, reverse direction.
+            if (sortConfig.columnIndex === columnIndex) {
+                sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                // Otherwise, switch to the new column and default to descending.
+                sortConfig.columnIndex = columnIndex;
+                sortConfig.direction = 'desc';
+            }
+            sortTable();
+        });
+    });
+
+    // Perform the initial sort when the page loads.
+    sortTable();
+});
+</script>
+
+    
+
+</d-article></body></html>
