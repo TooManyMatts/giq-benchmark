@@ -2,8 +2,10 @@
 
 <div align="center">
 
+<h3>Accepted to ICLR 2026</h3>
+
 <a href="https://openreview.net/forum?id=Uf8X57bQIr">
-  <img src="https://img.shields.io/badge/Conference-ICLR_2026-B31B1B.svg" alt="Accepted to ICLR 2026">
+  <img src="https://img.shields.io/badge/OpenReview-Paper-B31B1B.svg" alt="OpenReview">
 </a>
 
 <a href="https://arxiv.org/abs/2506.08194">
