@@ -1,6 +1,16 @@
 # GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra
 
-<a href="https://arxiv.org/abs/2506.08194"><img src="https://img.shields.io/badge/Arxiv-2408.00653-B31B1B.svg"></a>
+<div align="center">
+
+<a href="https://openreview.net/forum?id=Uf8X57bQIr">
+  <img src="https://img.shields.io/badge/Conference-ICLR_2026-B31B1B.svg" alt="Accepted to ICLR 2026">
+</a>
+
+<a href="https://arxiv.org/abs/2506.08194">
+  <img src="https://img.shields.io/badge/Arxiv-2506.08194-B31B1B.svg" alt="Arxiv">
+</a>
+
+</div>
 
 <br>
 
