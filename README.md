@@ -45,9 +45,12 @@ This repository contains the official codebase for **GIQ**, a comprehensive benc
 - **3D meshes** (OBJ format, organized as `3d_meshes/<group>/<shape_id>.obj`):
   
   [**Download Meshes (22.8 MB)**](https://drive.google.com/file/d/1i_6up_4Cc24EaIhnKkhMboaDw-1tdJdC/view?usp=sharing)
-- **Rendered images** (JPG format):
-  
-  [**Download Renderings (90 GB)**](https://drive.google.com/file/d/1kCXKpisGIcz7qgKpdMFqzNji7CnNIX9w/view?usp=sharing)
+- **Wild images** (JPG format):
+
+  [**Download Wild Images (90 GB)**](https://drive.google.com/file/d/1kCXKpisGIcz7qgKpdMFqzNji7CnNIX9w/view?usp=sharing)
+- **Synthetic images** (PNG format):
+
+  [**Download Synthetic Images (305 MB)**](https://drive.google.com/file/d/1AjVDhaf0oJctrlGa0b15X4Bn3zfxFQxj/view?usp=sharing)
 
 
 
