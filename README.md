@@ -142,9 +142,9 @@ emb = model.encode_image(img_prep)
 
 ## Citation
 ```BibTeX
-@article{michalkiewicz2025giq,
+@inproceedings{michalkiewicz2026giq,
   title={GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra},
   author={Michalkiewicz, Mateusz and Sokhal, Anekha and Michalkiewicz, Tadeusz and Pawlikowski, Piotr and Baktashmotlagh, Mahsa and Jampani, Varun and Balakrishnan, Guha},
-  journal={arXiv preprint arXiv:2506.08194},
-  year={2025}
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
 }
