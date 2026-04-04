@@ -53,6 +53,10 @@ This repository contains the official codebase for **GIQ**, a comprehensive benc
   [**Download Synthetic Images (305 MB)**](https://drive.google.com/file/d/1AjVDhaf0oJctrlGa0b15X4Bn3zfxFQxj/view?usp=sharing)
 
 
+These assets are also available on **Hugging Face**:  
+[**mm305/giq**](https://huggingface.co/datasets/mm305/giq)
+
+
 
 ---
 
